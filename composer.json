@@ -1,8 +1,6 @@
 {
     "name": "beplus/import-pack",
     "description": "WordPress import demo",
-    "type": "wordpress, import, dummy data, backup, restore",
-    "license": "Mit",
     "authors": [
         {
             "name": "Hieuhuynh",
