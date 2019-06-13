@@ -300,16 +300,15 @@
         } )
     }
 
-    ImportPack.DownloadPackage = async function( package_name, position, path_file_package, args ) {
+    ImportPack.DownloadPackage = async function( package_name, position, _package, args ) {
 
         var send_data = {
             package_name: package_name,
             position: position || 0,
-            path_file_package: path_file_package || ''
+            package: _package || ''
         };  
 
         try {
-
             var result = await $.ajax( {
                 type: 'POST',
                 url: import_pack_php_data.ajax_url,
@@ -319,23 +318,23 @@
                 }
             } );
         } catch ( error ) {
-
             console.log( error );
-            return await ImportPack.DownloadPackage( package_name, position, path_file_package, args );
+            return ImportPack.DownloadPackage( package_name, position, _package, args );
         }
+       
 
         if( args.after_request_callback ) {
             args.after_request_callback.call( send_data, result );
         }
 
         if( true == result.success && true != result.result.download_package_success ) {
-            await ImportPack.DownloadPackage( package_name, result.result.x_position, result.result.path_file_package, args );
+            await ImportPack.DownloadPackage( package_name, result.result.x_position, result.result.package, args );
         }
 
         return result;
     }
 
-    ImportPack.ExtractPackage = async function( package_name, path_file_package ) {
+    ImportPack.ExtractPackage = async function( package_name, _package ) {
 
         try {
             
@@ -346,7 +345,7 @@
                     action: 'ametex_import_pack_extract_package_demo',
                     data: {
                         package_name: package_name,
-                        path_file_package: path_file_package,
+                        package: _package,
                     },
                 }
             } )
@@ -409,7 +408,7 @@
 
             // Extract package
             log.html( `Extract package...` );
-            var extract_package_result = await ImportPack.ExtractPackage( Current_Package_Id, download_package_result.result.path_file_package );
+            var extract_package_result = await ImportPack.ExtractPackage( Current_Package_Id, download_package_result.result.package );
 
             if( true == extract_package_result.success && true == extract_package_result.result.extract_success ) {
                 log.html( `Extract package successful!` );

@@ -145,9 +145,9 @@ if( ! function_exists( 'ametex_import_pack_download_package' ) ) {
         extract( $_POST );
         $package_name = $data['package_name'];
         $position = isset( $data['position'] ) ? $data['position'] : 0;
-        $path_file_package = isset( $data['path_file_package'] ) ? $data['path_file_package'] : '';
+        $package = isset( $data['package'] ) ? $data['package'] : '';
 
-        $result = ametex_import_pack_download_package_step( $package_name, $position, $path_file_package );
+        $result = ametex_import_pack_download_package_step( $package_name, $position, $package );
 
         wp_send_json( array(
             'success' => true,
@@ -171,7 +171,11 @@ if( ! function_exists( 'ametex_import_pack_extract_package_demo' ) ) {
         extract( $_POST );
 
         $package_name = $data['package_name'];
-        $path_file_package = $data['path_file_package'];
+        $package = $data['package'];
+       
+        $upload_dir = wp_upload_dir();
+        $path = $upload_dir['basedir'];
+        $path_file_package = $path . '/' . $package;
 
         $backup_path = $Bears_Backup->upload_path();
         $extract_to = $backup_path . '/' . sprintf( 'package-install__%s', $package_name );
