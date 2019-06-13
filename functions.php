@@ -1,4 +1,6 @@
 <?php 
+namespace beplus\importpack;
+
 /**
  * Import main functions
  * 

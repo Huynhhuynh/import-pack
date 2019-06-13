@@ -1,5 +1,5 @@
 {
-    "name": "beplus/import-pack",
+    "name": "beplus/importpack",
     "description": "WordPress import demo",
     "authors": [
         {
@@ -10,10 +10,5 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.6.0"
-    },
-    "autoload": {
-        "files": [
-            "functions.php"
-        ]
     }
 }
