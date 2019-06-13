@@ -1,6 +1,4 @@
 <?php 
-namespace importpack\functions;
-
 /**
  * Import main functions
  * 
@@ -9,13 +7,24 @@ namespace importpack\functions;
  * @version 1.0
  */
 
+if( ! function_exists( 'ametex_import_pack_path_to_url' ) ) {
+    /**
+     * Help function path to url 
+     * 
+     */
+    function ametex_import_pack_path_to_url( $path ) {
+        return get_site_url() . '/' . str_replace( ABSPATH, '', $path );
+    }
+}
+
+
 {
     /**
      * Defines
      * 
      */
     define( 'IMPORT_DIR', __DIR__ );
-    define( 'IMPORT_URI', get_template_directory_uri() . '/framework/install/import-pack/' );
+    define( 'IMPORT_URI', ametex_import_pack_path_to_url( __DIR__ ) );
     define( 'IMPORT_VER', '1.0.0' );
 
     define( 'IMPORT_REMOTE_SERVER', 'http://bearsthemespremium.com/install/demo/ametex/' );
@@ -63,7 +72,7 @@ if( ! function_exists( 'ametex_register_import_page_callback' ) ) {
     function ametex_register_import_page_callback() {
 
         set_query_var( 'tabs', amentex_import_page_tabs() );
-        load_template( IMPORT_DIR . 'templates/import-page.php' );
+        load_template( IMPORT_DIR . '/templates/import-page.php' );
     }
 }
 
