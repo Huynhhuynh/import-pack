@@ -14,7 +14,7 @@ namespace importpack\functions;
      * Defines
      * 
      */
-    define( 'IMPORT_DIR', get_template_directory() . '/framework/install/import-pack/' );
+    define( 'IMPORT_DIR', __DIR__ );
     define( 'IMPORT_URI', get_template_directory_uri() . '/framework/install/import-pack/' );
     define( 'IMPORT_VER', '1.0.0' );
 
