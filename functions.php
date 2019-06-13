@@ -1,5 +1,5 @@
 <?php 
-namespace beplus\importpack;
+namespace importpack\functions;
 
 /**
  * Import main functions
