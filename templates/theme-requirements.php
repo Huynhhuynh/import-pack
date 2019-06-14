@@ -2,7 +2,7 @@
 /** 
  * Import pack theme requirements 
  * 
- * @package Ametex 
+ * @package Import Pack 
  * @author BePlus
  */
 

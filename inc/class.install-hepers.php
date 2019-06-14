@@ -2,7 +2,7 @@
 /**
  * Import pack class install helpers
  * 
- * @package Ametex 
+ * @package Import Pack 
  * @author Beplus 
  */
 

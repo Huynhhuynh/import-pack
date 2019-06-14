@@ -1,7 +1,7 @@
 /**
  * Import pack javascript
  * 
- * @package Ametex 
+ * @package Import Pack 
  * @author BePlus
  */
 
@@ -85,7 +85,7 @@
                 type: 'POST',
                 url: import_pack_php_data.ajax_url,
                 data: {
-                    action: 'ametex_import_pack_modal_import_body_template', 
+                    action: 'beplus_import_pack_modal_import_body_template', 
                     package_id: package_id,
                 },
             } )
@@ -133,7 +133,7 @@
             $.ajax( {
                 type: 'POST',
                 url: import_pack_php_data.ajax_url,
-                data: { action: 'ametex_import_pack_import_action_ajax_callback', data: {
+                data: { action: 'beplus_import_pack_import_action_ajax_callback', data: {
                     package_id: package_id,
                     action_type: action_type,
                     form_data: form_data,
@@ -202,7 +202,7 @@
         var result = await $.ajax( {
             type: 'POST',
             url: import_pack_php_data.ajax_url,
-            data: { action: 'ametex_import_pack_install_plugin', data: {
+            data: { action: 'beplus_import_pack_install_plugin', data: {
                 plugin_slug: plugin.slug, 
                 plugin_source: plugin.source
             } },
@@ -313,7 +313,7 @@
                 type: 'POST',
                 url: import_pack_php_data.ajax_url,
                 data: {
-                    action: 'ametex_import_pack_download_package',
+                    action: 'beplus_import_pack_download_package',
                     data: send_data
                 }
             } );
@@ -342,7 +342,7 @@
                 type: 'POST',
                 url: import_pack_php_data.ajax_url,
                 data: {
-                    action: 'ametex_import_pack_extract_package_demo',
+                    action: 'beplus_import_pack_extract_package_demo',
                     data: {
                         package_name: package_name,
                         package: _package,
@@ -366,7 +366,7 @@
                 type: 'POST',
                 url: import_pack_php_data.ajax_url,
                 data: {
-                    action: 'ametex_import_pack_restore_data',
+                    action: 'beplus_import_pack_restore_data',
                     data: {
                         package_path: package_path
                     }
@@ -457,7 +457,7 @@
                     type: 'POST',
                     url: import_pack_php_data.ajax_url,
                     data: {
-                        action: `ametex_import_pack_backup_site_substep_${step_name}`,
+                        action: `beplus_import_pack_backup_site_substep_${step_name}`,
                         data: {
                             next_step_data: next_step_data,
                         },

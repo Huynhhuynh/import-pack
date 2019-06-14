@@ -2,14 +2,14 @@
 /** 
  * Import pack demo install package template 
  * 
- * @package Ametex 
+ * @package Import Pack 
  * @author BePlus
  */
 
 // echo '<pre>'; print_r( $package_demos ); echo '</pre>';
 ?>
 
-<?php do_action( 'ametex/import_pack/demo_install_package/before' ); ?>
+<?php do_action( 'beplus/import_pack/demo_install_package/before' ); ?>
 
 <div class="ip-package-demo-list">
     <?php foreach( $package_demos as $index => $package_item ) : ?>
@@ -19,11 +19,11 @@
             <img src="<?php echo esc_url( $package_item['preview'] ); ?>" alt="<?php echo esc_attr( $package_item['title'] ); ?>">
         
             <div class="actions">
-                <a href="<?php echo esc_url( $package_item['url_demo'] ) ?>" target="_blank" class="__action-preview-demo" title="<?php echo esc_attr( 'Preview demo', 'ametex' ); ?>">
-                    <?php _e( 'Preview', 'ametex' ); ?>
+                <a href="<?php echo esc_url( $package_item['url_demo'] ) ?>" target="_blank" class="__action-preview-demo" title="<?php echo esc_attr( 'Preview demo', 'beplus' ); ?>">
+                    <?php _e( 'Preview', 'beplus' ); ?>
                 </a>
-                <a href="javascript:" class="__action-import-demo" title="<?php echo esc_attr( 'Import demo', 'ametex' ); ?>" data-package-id="<?php echo esc_attr( trim( $package_item['package_name'] ) ); ?>">
-                    <?php _e( 'Import', 'ametex' ); ?>
+                <a href="javascript:" class="__action-import-demo" title="<?php echo esc_attr( 'Import demo', 'beplus' ); ?>" data-package-id="<?php echo esc_attr( trim( $package_item['package_name'] ) ); ?>">
+                    <?php _e( 'Import', 'beplus' ); ?>
                 </a>
             </div>
         </div>
@@ -42,4 +42,4 @@
     <?php endforeach; ?>
 </div> <!-- .ip-package-demo-list -->
 
-<?php do_action( 'ametex/import_pack/demo_install_package/after' ); ?>
+<?php do_action( 'beplus/import_pack/demo_install_package/after' ); ?>

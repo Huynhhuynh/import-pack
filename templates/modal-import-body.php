@@ -2,7 +2,7 @@
 /**
  * Modal import body template 
  * 
- * @package Ametex 
+ * @package Import Pack 
  * @author Beplus 
  */
 

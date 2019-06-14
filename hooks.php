@@ -2,7 +2,7 @@
 /** 
  * Import pack hooks 
  * 
- * @package Ametex
+ * @package Import Pack
  */
 
-add_action( 'admin_menu', 'ametex_register_import_menu' );
+add_action( 'admin_menu', 'beplus_register_import_menu' );

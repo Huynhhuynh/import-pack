@@ -5,7 +5,7 @@
  */
 
 if( empty(  $package_data ) ) {
-    _e( 'Package not exist! please try again or open sticky. Thank you!', 'ametex' );
+    _e( 'Package not exist! please try again or open sticky. Thank you!', 'beplus' );
     return;
 }
 ?>

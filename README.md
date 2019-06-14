@@ -10,7 +10,7 @@ composer require huynhhuynh/import-pack
 ## Hooks
 #### Package demos hook
 ```php
-add_action( 'ametex/import_pack/package_demo', 'my_demo' );
+add_action( 'beplus/import_pack/package_demo', 'my_demo' );
 function my_demo( $demos ) {
 	return [
 		[
